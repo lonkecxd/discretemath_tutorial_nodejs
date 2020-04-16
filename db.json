@@ -1,0 +1,93 @@
+{
+    "users": [
+        {
+            "id": "1001",
+            "name": "xxx",
+            "nickname": "xxx"
+        }
+    ],
+    "problems": [
+        {
+            "id": "1001",
+            "description": "将下列命题符号化：",
+            "questions": {
+                "1": "吴颖既用功又聪明.",
+                "2": "吴颖不仅用功而且聪明.",
+                "3": "吴颖虽然聪明,但不用功.",
+                "4": "张辉与王丽都是三好生.",
+                "5": "张辉与王丽是同学."
+            },
+            "choices": {},
+            "answers": {},
+            "chapterId": "1",
+            "subchapterId": "1.1",
+            "subsubchapterId": "1.1.1",
+            "theoryId": [
+                "1-1"
+            ]
+        }
+    ],
+    "theories": [
+        {
+            "id": "1-1",
+            "type":"定理",
+            "text": "对任意集合 A，B，有：\n（1）若 A ⊆ B ，则 P(A) ⊆ P(B) ；反之，若 P(A) ⊆ P(B) ，则 A ⊆ B\n（2）若 A = B ，则 P(A) = P(B) ；反之，若 P(A) = P(B) ，则 A = B\n（3） P(A) Υ ⊆ P(B) P(A Υ B)\n（4） P(A) Ι P(B) = P(A Ι B)\n（5） P(A − Υ B) ⊆ (P(A) − P(B)) {∅}",
+            "chapterId": "1",
+            "subchapterId": "1.1",
+            "subsubchapterId": "1.1.1"
+        }
+    ],
+    "chapters": [
+        {
+            "id": "1",
+            "text": "集合论"
+        },
+        {
+            "id": "2",
+            "text": "二元关系"
+        }
+    ],
+    "subchapters": [
+        {
+            "id": "1.1",
+            "text": "内容分析",
+            "chapterId": "1"
+        },
+        {
+            "id": "1.2",
+            "text": "重点及难点分析",
+            "chapterId": "1"
+        }
+    ],
+    "subsubchapters": [
+        {
+            "id": "1.1.1",
+            "text": "集合的基本概念",
+            "subchapterId": "1.1"
+        },
+        {
+            "id": "1.1.2",
+            "text": "子集、集合的相等",
+            "subchapterId": "1.1"
+        }
+    ],
+    "answerSheets": [
+        {
+            "id": "1001",
+            "problemId": "1001",
+            "userId": "1001"
+        }
+    ],
+    "answers": [
+        {
+            "id": "101",
+            "text": "123",
+            "answerSheetId": "1001"
+        },
+        {
+            "id": "102",
+            "text": "234",
+            "answerSheetId": "1001"
+        }
+    ]
+}
