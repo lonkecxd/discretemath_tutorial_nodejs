@@ -1,6 +1,7 @@
 //include packages
 utils = require('./utils');
 const bodyParser = require('body-parser');
+//const multer = require('multer');
 // json-server router
 const jsonServer = require('json-server');
 const server = jsonServer.create();
@@ -11,9 +12,9 @@ const port = process.env.PORT || 3000;
 const jwt = require('jsonwebtoken');
 // Connect Neo4j in heroku
 var neo4j = require('neo4j-driver');
-var graphenedbURL = process.env.GRAPHENEDB_BOLT_URL;
-var graphenedbUser = process.env.GRAPHENEDB_BOLT_USER;
-var graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
+var graphenedbURL = process.env.GRAPHENEDB_BOLT_URL || " ";
+var graphenedbUser = process.env.GRAPHENEDB_BOLT_USER || " ";
+var graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD || " ";
 var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
 var session = driver.session();
 
@@ -75,6 +76,5 @@ server.use(jsonServer.bodyParser);
 server.use(router);
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
-server.use(require('multer')());
 
 server.listen(port);
