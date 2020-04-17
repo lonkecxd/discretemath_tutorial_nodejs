@@ -3,7 +3,8 @@
         {
             "id": "1001",
             "name": "xxx",
-            "nickname": "xxx"
+            "nickname": "xxx",
+            "email": "xxx"
         }
     ],
     "problems": [
@@ -22,9 +23,7 @@
             "chapterId": "1",
             "subchapterId": "1.1",
             "subsubchapterId": "1.1.1",
-            "theoryId": [
-                "1-1"
-            ]
+            "theoryId": "1-1"
         }
     ],
     "theories": [
@@ -35,6 +34,14 @@
             "chapterId": "1",
             "subchapterId": "1.1",
             "subsubchapterId": "1.1.1"
+        },
+        {
+            "id": "1-2",
+            "type":"定理",
+            "text": "定理二",
+            "chapterId": "1",
+            "subchapterId": "1.1",
+            "subsubchapterId": "1.1.2"
         }
     ],
     "chapters": [
