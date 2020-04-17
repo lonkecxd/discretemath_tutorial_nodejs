@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 // Jsonwebtoken
 const jwt = require('jsonwebtoken');
 // Connect Neo4j in heroku
-var neo4j = require('neo4j-driver').v1;
+var neo4j = require('neo4j-driver');
 var graphenedbURL = process.env.GRAPHENEDB_BOLT_URL;
 var graphenedbUser = process.env.GRAPHENEDB_BOLT_USER;
 var graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
@@ -22,10 +22,11 @@ server.get('/api', (req,res)=>{
         message:"Welcome to API!"
     });
 });
-server.get('/api/ka', (req,res)=>{
+server.get('/api/:p1', (req,res)=>{
+    var p1 = req.params.p1;
     session
-        .run("MATCH (bacon:Person {name:\"Kevin Bacon\"})-[*1]-(hollywood)\n" +
-            "RETURN DISTINCT bacon,hollywood")
+        .run("MATCH (p:Person {name:\"$p\"})-[*1]-(hollywood)\n" +
+            "RETURN DISTINCT p,hollywood",{p: p1})
         .then(function(result) {
             result.records.forEach(function(record) {
                 res.json({
@@ -72,6 +73,8 @@ server.use(middlewares);
 server.use(utils.exclude('/api/:other', utils.verifyToken));
 server.use(jsonServer.bodyParser);
 server.use(router);
-server.use(bodyParser);
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true }));
+server.use(require('multer')());
 
 server.listen(port);
