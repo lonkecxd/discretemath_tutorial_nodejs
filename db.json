@@ -9,6 +9,870 @@
     ],
     "problems": [
         {
+            "id": "0000",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "对任意集合 A、B、C，",
+            "question": "下述论断正确的是（ ）。",
+            "options": {
+                "A": "A．若 A∈ B ， B ⊆ C ，则 A∈C ",
+                "B": "B．若 A∈ B ， B ⊆ C ，则 A ⊆ C ",
+                "C": "C．若 A ⊆ B ， B ∈C ，则 A∈C ",
+                "D": "D．若 A ⊆ B ， B ∈C ，则 A ⊆ C"
+            },
+            "answer": "答案：A（说明：可以举例说明上面的选项 B，C，D 均是不正确的。如：对选项 B，取 A={1}， B={{1}}，B=C。对选项 C，取 A = ∅ ，B={1}，C={{1}}。对选项 D，取 A=B={1}， C={{1}}。）",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0001",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "设 A − B = ∅，",
+            "question": "则有（ ）。",
+            "options": {
+                "A": "A． B = ∅ ",
+                "B": "B． B ≠ ∅ ",
+                "C": "C． A ⊆ B ",
+                "D": "D． A ⊇ B"
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0002",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "设 P = {x|(x+1)^2 ≤ 4}，Q = {x|x^2+16 ≥ 5x }，",
+            "question": "则下列选项正确的是（ ）。",
+            "options": {
+                "A": "A． P ⊃ Q ",
+                "B": "B． P ⊇ Q ",
+                "C": "C．Q ⊃ P ",
+                "D": "D．Q = P"
+            },
+            "answer": "答案：C",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0003",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "设 A = {{1,2,3},{4,5},{6,7,8}}，",
+            "question": "下列选项正确的为（ ）。",
+            "options": {
+                "A": "A．1 ∈ A",
+                "B": "B．{1,2,3} ⊆ A  ",
+                "C": "C．{{4,5}} ⊂ A ",
+                "D": "D．∅ ∈ A"
+            },
+            "answer": "答案：C",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0004",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "下列各选项",
+            "question": "错误的是（ ）。",
+            "options": {
+                "A": "A．∅ ⊆ ∅ ",
+                "B": "B．∅ ∈∅ ",
+                "C": "C．∅ ⊆ {∅} ",
+                "D": "D．∅ ∈{∅}"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0005",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "设 A = { x|x^3-x=0}，B = {x|x^2 − 4 < 0，x ∈ Z}，C = {x | y = 2x −1}， D = {x | x + y = 5, xy = 6}，",
+            "question": "则有（ ）。",
+            "options": {
+                "A": "A．A=B ",
+                "B": "B．A=C ",
+                "C": "C．C=D ",
+                "D": "D．C=A"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0006",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "在 0 ____ ∅ 之间",
+            "question": "填上正确的符号。",
+            "options": {
+                "A": "A．= ",
+                "B": "B．∈ ",
+                "C": "C．⊆ ",
+                "D": "D．∉"
+            },
+            "answer": "答案：D ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0007",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "设 M = {x|f1(x)=0}, N = {x|f2(x)=0}，",
+            "question": "则方程f1（x） ⋅ f2（x） = 的解为（ ）。",
+            "options": {
+                "A": "A．M Ι N",
+                "B": "B．M Υ N",
+                "C": "C．M ⊕ N",
+                "D": "D．M−N"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0008",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "设 A = {a,{a}}，",
+            "question": "下列选项错误的是（ ）。",
+            "options": {
+                "A": "A．{a}∈ P(A) ",
+                "B": "B．{a} ⊆ P(A) ",
+                "C": "C．{{a}}∈ P(A) ",
+                "D": "D．{{a}} ⊆ P(A)"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0009",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "设 A = {∅}，B=P（P（A）），",
+            "question": "下列选项错误的是（ ）。",
+            "options": {
+                "A": "A．∅ ∈ B ",
+                "B": "B．{∅}∈ B ",
+                "C": "C．{{∅}}∈ B ",
+                "D": "D．{∅,{∅}}∈ P(A)"
+            },
+            "answer": "答案：D ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0010",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "幂集 P(P(P(∅)))",
+            "question": "为（ ）。",
+            "options": {
+                "A": "A．{{∅},{∅,{∅}}} ",
+                "B": "B．{∅,{∅,{∅}},{∅}}",
+                "C": "C．{∅,{∅,{∅}},{{∅}},{∅}} ",
+                "D": "D．{∅,{∅,{∅}}}"
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0011",
+            "chapter": "set_theory",
+            "type": "multiple_choice",
+            "description": "空集∅的幂集 P（∅ ）的",
+            "question": "基数是（ ）。",
+            "options": {
+                "A": "A．0 ",
+                "B": "B．1 ",
+                "C": "C．3 ",
+                "D": "D．4 "
+            },
+            "answer": "答案：B",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0012",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "由 n 个命题变元组成不等值的命题公式",
+            "question": "的个数为（ ）。",
+            "options": {
+                "A": "A．2n ",
+                "B": "B．2^n",
+                "C": "C．n^2",
+                "D": "D．2^(2^n)"
+            },
+            "answer": "答案：D ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0013",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "设 P：我将去镇上，Q：我有时间。",
+            "question": "命题“我将去镇上，仅当我有时间时”符号化为（ ）。",
+            "options": {
+                "A": "A． P → Q ",
+                "B": "B．Q → P ",
+                "C": "C． P ↔ Q ",
+                "D": "D．¬Q ∨ ¬P"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0014",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下列各组公式中，",
+            "question": "哪组是互为对偶的?（ ）（其中 P 为单独的命题变元，A 为含有联结词的命题公式）",
+            "options": {
+                "A": "A． P, P ",
+                "B": "B． P,¬P ",
+                "C": "C． A,(A*)*",
+                "D": "D． A, A"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0015",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "设 P：我们划船，Q：我们跑步。",
+            "question": "命题“我们不能既划船又跑步”符号化为（ ）。",
+            "options": {
+                "A": "A．¬P ∧ ¬Q ",
+                "B": "B．¬P ∨ ¬Q ",
+                "C": "C．¬(P ↔ Q) ",
+                "D": "D． P ↔ ¬Q"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0016",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下面哪一个命题是",
+            "question": "命题“2 是偶数或－3 是负数”的否定?（ ）",
+            "options": {
+                "A": "A．2 是偶数或－3 不是负数 ",
+                "B": "B．2 是奇数或－3 不是负数",
+                "C": "C．2 不是偶数且－3 不是负数 ",
+                "D": "D．2 是奇数且－3 不是负数"
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0017",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "设 P：张三可以做这件事，Q：李四可以做这件事。",
+            "question": "命题“张三或李四可以做这件事”符号化为（ ）。",
+            "options": {
+                "A": "A． P ∨ Q ",
+                "B": "B． P ∨ ¬Q ",
+                "C": "C． P ↔ Q ",
+                "D": "D．¬(¬P ∨ ¬Q)"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0018",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下列语句中",
+            "question": "哪个是真命题?（ ）",
+            "options": {
+                "A": "A．我正在说谎 ",
+                "B": "B．严禁吸烟；",
+                "C": "C．如果 1+2=3，那么雪是黑的 ",
+                "D": "D．如果 1+2=5，那么雪是黑的。"
+            },
+            "answer": "答案：D",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0019",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下面哪个联结词运算",
+            "question": "不可交换?（ ）",
+            "options": {
+                "A": "A．∧ ",
+                "B": "B．→ ",
+                "C": "C．∨ ",
+                "D": "D． ↔"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0020",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "命题公式(P ∧ (P → Q)) → Q",
+            "question": "是（ ）。",
+            "options": {
+                "A": "A．矛盾式 ",
+                "B": "B．蕴含式 ",
+                "C": "C．重言式 ",
+                "D": "D．等值式"
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0021",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下面哪个命题公式",
+            "question": "是重言式?（ ）",
+            "options": {
+                "A": "A．(P → Q) ∧ (Q → P) ",
+                "B": "B．( P ∧ Q) → P ",
+                "C": "C．(¬P ∨ Q) ∧ ¬(¬P ∧ ¬Q) ",
+                "D": "D．¬(P ∨ Q)"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0022",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下面哪一组命题公式",
+            "question": "是等值的?（ ）",
+            "options": {
+                "A": "A．¬P ∧ ¬Q, B P ∨ Q ",
+                "B": "B． A → (B → A),¬A → (A → ¬B) ",
+                "C": "C．Q → (P ∨ Q),¬Q ∧ (P ∨ Q) ",
+                "D": "D．¬A ∨ (A ∧ B),B"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0023",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "P → Q 的",
+            "question": "逆反式是（ ）。",
+            "options": {
+                "A": "A．Q → ¬P ",
+                "B": "B． P → ¬Q ",
+                "C": "C．¬Q → P ",
+                "D": "D．¬Q → ¬P"
+            },
+            "answer": "答案：D ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0024",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "¬P → Q 的",
+            "question": "逆换式是（ ）。",
+            "options": {
+                "A": "A．Q → ¬P ",
+                "B": "B． P → ¬Q ",
+                "C": "C．Q → ¬P ",
+                "D": "D． P → ¬Q"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0025",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下列命题联结词集合中，",
+            "question": "哪个是最小联结词组?（ ）",
+            "options": {
+                "A": "A．{ } ¬,↔ ",
+                "B": "B．{¬,∨,∧} ",
+                "C": "C．{↑} ",
+                "D": "D．{∧,→}"
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0026",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下面联结词集中，",
+            "question": "哪一个不是最小联结词组?（ ）",
+            "options": {
+                "A": "A．{ } ¬,∧ ",
+                "B": "B．{¬,→} ",
+                "C": "C．{¬,∧,∨} ",
+                "D": "D．{↑}"
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0027",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "已知 A 是 B 的充分条件，B 是 C 的必要条件，D 是 B 的必要条件，",
+            "question": "则 A 是 D 的 （ ）。",
+            "options": {
+                "A": "A．充分条件 ",
+                "B": "B．必要条件 ",
+                "C": "C．充要条件 ",
+                "D": "D．A、B、C 都不对"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0028",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "¬P → Q 的",
+            "question": "反换式是（ ）。",
+            "options": {
+                "A": "A．Q → ¬P ",
+                "B": "B．¬P → ¬Q ",
+                "C": "C．¬Q → ¬P ",
+                "D": "D． P → ¬Q"
+            },
+            "answer": "答案：D ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0029",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下面哪一个命题公式",
+            "question": "是重言式?（ ）",
+            "options": {
+                "A": "A． P → (Q ∨ R) ",
+                "B": "B．(P ∨ R) ∧ (P → Q) ； ",
+                "C": "C．(P ∨ Q) ↔ (Q ∨ R) ",
+                "D": "D．(P → (Q → R)) → ((P → Q) → (P → R))"
+            },
+            "answer": "答案：D ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0030",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下面哪个命题公式",
+            "question": "不是重言式?（ ）",
+            "options": {
+                "A": "A．Q → (P ∨ Q) ",
+                "B": "B．( P ∧ Q) → P ",
+                "C": "C．¬(P ∧ ¬Q) ∧ (¬P ∨ Q) ",
+                "D": "D．(P → Q) ↔ (¬P ∨ Q)"
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0031",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "重言式的",
+            "question": "否定式是（ ）。",
+            "options": {
+                "A": "A．重言式 ",
+                "B": "B．矛盾式 ",
+                "C": "C．可满足式 ",
+                "D": "D．蕴含式"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0032",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下面哪一个命题",
+            "question": "是假命题?（ ）",
+            "options": {
+                "A": "A．如果 2 是偶数，那么一个公式的析取范式惟一",
+                "B": "B．如果 2 是偶数，那么一个公式的析取范式不惟一",
+                "C": "C．如果 2 是奇数，那么一个公式的析取范式惟一",
+                "D": "D．如果 2 是奇数，那么一个公式的析取范式不惟一"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0033",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "下面哪一组命题公式",
+            "question": "不是等值的?（ ）",
+            "options": {
+                "A": "A．¬( A → B), A ∧ ¬B",
+                "B": "B ．¬(A ↔ B),(A ∧ ¬B) ∨ (¬A ∧ B) ",
+                "C": "C． A → (B ∨ C),¬A ∧ (B ∨ C) ",
+                "D": "D． A → ( B ∨ C),(A ∧ ¬B) → C"
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0034",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "命题公式 P → Q ∧ R 的",
+            "question": "对偶式为（ ）。",
+            "options": {
+                "A": "A． P → (Q ∨ R) ",
+                "B": "B． P ∧ (Q ∨ R) ",
+                "C": "C．¬P ∨ (Q ∧ R) ",
+                "D": "D．¬P ∧ (Q ∨ R)"
+            },
+            "answer": "答案：D",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0035",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "命题公式 P → (Q ↓ P)",
+            "question": "是（ ）。",
+            "options": {
+                "A": "A．重言式 ",
+                "B": "B．可满足式 ",
+                "C": "C．矛盾式 ",
+                "D": "D．等值式"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0036",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "P ↔ ¬Q",
+            "question": "⇔ （ ）。",
+            "options": {
+                "A": "A．¬P → (P → ¬Q) ",
+                "B": "B．(¬P ∨ Q) ∧ (¬Q ∨ P) ",
+                "C": "C．(¬P ∨ ¬Q) ∧ (¬Q ∨ P) ",
+                "D": "D．(¬P ∨ ¬Q) ∧ (Q ∨ P)"
+            },
+            "answer": "答案：D ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0037",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "命题公式¬(P ∧ Q) → R 的主析取范式中",
+            "question": "含极小项的个数为（ ）。",
+            "options": {
+                "A": "A．8 ",
+                "B": "B．3 ",
+                "C": "C．5 ",
+                "D": "D．0 "
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0038",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "命题公式¬(P ∧ Q) → R 的主析取范式中",
+            "question": "含极大项的个数为（ ）。",
+            "options": {
+                "A": "A．0 ",
+                "B": "B．8 ",
+                "C": "C．5 ",
+                "D": "D．3 "
+            },
+            "answer": "答案：D ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0039",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "命题公式¬(P ∧ Q) → R 的",
+            "question": "成真赋值为（ ）。",
+            "options": {
+                "A": "A．000，001，110 ",
+                "B": "B．001，011，101，110，111 ",
+                "C": "C．全体赋值 ",
+                "D": "D．无"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0040",
+            "chapter": "propositional_logic",
+            "type": "multiple_choice",
+            "description": "如果 A ⇒ B 成立，",
+            "question": "则以下各种蕴含关系哪一个成立?（ ）",
+            "options": {
+                "A": "A． B ⇒ A",
+                "B": "B．¬A ⇒ ¬B",
+                "C": "C．¬B ⇒ ¬A",
+                "D": "D．¬A ⇒ B"
+            },
+            "answer": "答案：C",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0041",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "谓词公式∀x(P(x) ∨ ∃yR( y)) → Q(x) 中",
+            "question": "量词∀x 的作用域是（ ）。",
+            "options": {
+                "A": "A．∀x( P(x) ∨ ∃yR(y) )",
+                "B": "B． P(x) ",
+                "C": "C．( P(x) ∨ ∃yR(y) )",
+                "D": "D． P(x),Q(x)"
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0042",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "谓词公式∀x(P(x) ∨ ∃yR(y)) → Q(x) 中",
+            "question": "变元 x 是（ ）。",
+            "options": {
+                "A": "A．自由变量",
+                "B": "B．约束变量",
+                "C": "C．既不是自由变量也是不约束变量",
+                "D": "D．既是自由变量也是约束变量"
+            },
+            "answer": "答案：D ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0043",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "若个体域为整数域，",
+            "question": "下列公式中哪个值为真？（ ）",
+            "options": {
+                "A": "A．∀x∃y(x + y = 0)",
+                "B": "B．∃y∀x(x + y = 0) ",
+                "C": "C．∀x∀y(x + y = 0) ",
+                "D": "D．¬∃x∃y(x + y = 0)"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0044",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "设谓词 P(x) : x 是奇数，Q(x) : x 是偶数，",
+            "question": "谓词公式∃x(P(x) ∧ Q(x))在下面哪个论域中是可满足的？（ ）",
+            "options": {
+                "A": "A．自然数集 ",
+                "B": "B．整数集",
+                "C": "C．实数集 ",
+                "D": "D．以上均不成立"
+            },
+            "answer": "答案：D ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0045",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "设C(x) : x 是运动员，G(x) : x 是强壮的，",
+            "question": "命题“没有一个运动员不是强壮的”可符号化为（ ）。",
+            "options": {
+                "A": "A．¬∀x(C(x) ∧ ¬G(x))",
+                "B": "B．¬∀x(C(x) → ¬G(x)) ",
+                "C": "C．¬∃x(C(x) ∧ ¬G(x))",
+                "D": "D．¬∃x(C(x) → ¬G(x))"
+            },
+            "answer": "答案：C ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0046",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "设 A(x) : x 是人， B(x) : x 犯错误，",
+            "question": "命题“没有不犯错误的人”符号化为（ ）。",
+            "options": {
+                "A": "A．∀x(A(x) ∧ B(x))",
+                "B": "B．¬∃x(A(x) → ¬B(x))",
+                "C": "C．¬∃x(A(x) ∧ B(x))",
+                "D": "D．¬∃x(A(x) ∧ ¬B(x))"
+            },
+            "answer": "答案：D",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0047",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "设 Z(x) : x 是整数， N(x) : x 是负数， S(x, y) : y 是 x 的平方，",
+            "question": "则“任何整数的平方非负”可表示为下述谓词公式：（ ）。",
+            "options": {
+                "A": "A．∀x∀y(Z(x) ∧ S(x, y) → ¬N( y)) ",
+                "B": "B．∀x∃y(Z(x) ∧ S(x, y) → ¬N(y))",
+                "C": "C．∀x∀y(Z(x) → S(x, y) ∧ ¬N( y)) ",
+                "D": "D．∀x(Z(x) ∧ S(x, y) → ¬N(y))"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0048",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "令 F(x) : x 是火车，G( y) : y 是汽车， H(x, y) : x 比 y 快。",
+            "question": "则语句“某些汽车比所有的火车慢”可表示为：（ ）。",
+            "options": {
+                "A": "A．∃y(G( y) → ∀x(F(x) ∧ H(x, y)))",
+                "B": "B．∃y(G( y) ∧ ∀x(F(x) → H(x, y)))",
+                "C": "C．∀x∃y(G( y) → (F(x) ∧ H(x, y)))",
+                "D": "D．∃y(G( y) → ∀x(F(x) → H(x, y)))"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0049",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "9．设个体域 A = {a,b}，",
+            "question": "公式∀xP(x) ∧ ∃xS(x) 在 A 中消去量词后应为（ ）。",
+            "options": {
+                "A": "A． P(x) ∧ S(x) ",
+                "B": "B． P(a) ∧ P(b) ∧ (S(a) ∨ S(b)) ",
+                "C": "C． P(a) ∧ S(b) ",
+                "D": "D． P(a) ∧ P(b) ∧ S(a) ∨ S(b)"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0050",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "在谓词演算中，",
+            "question": "下列各式哪个是正确的？（ ）",
+            "options": {
+                "A": "A．∃x∀yA(x, y) ⇔ ∀y∃xA(x, y) ",
+                "B": "B．∃x∃yA(x, y) ⇔ ∃y∃xA(x, y) ",
+                "C": "C．∃x∀yA(x, y) ⇔ ∀x∃yA(x, y) ",
+                "D": "D．∀x∀yA(x, y) ⇔ ∀y∀xB(x, y)"
+            },
+            "answer": "答案：B ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0051",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "下列各式",
+            "question": "哪个不正确？（ ）",
+            "options": {
+                "A": "A．∀x( ) P(x) ∨ Q(x) ⇔ ∀xP(x) ∨ ∀xQ(x) ",
+                "B": "B．∀x( ) P(x) ∧ Q(x) ⇔ ∀xP(x) ∧ ∀xQ(x) ",
+                "C": "C．∃x( ) P(x) ∨ Q(x) ⇔ ∃xP(x) ∨ ∃xQ(x)",
+                "D": "D．∀x( ) P(x) ∧ Q ⇔ ∀xP(x) ∧ Q"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0052",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "下面谓词公式",
+            "question": "哪个是前束范式？（ ）",
+            "options": {
+                "A": "A．∀x∀y∃z(B(x, y) → A(z)) ",
+                "B": "B．¬∀x∃yB(x, y) ",
+                "C": "C．∃x∀y∀x(A(x, y) ∧ B(x, y)) ",
+                "D": "D．∀x(A(x, y) → ∃yB(y))"
+            },
+            "answer": "答案：A ",
+            "steps": [],
+            "concepts": []
+        },
+        {
+            "id": "0053",
+            "chapter": "predicate_logic",
+            "type": "multiple_choice",
+            "description": "在谓词演算中： P(a) 是∀xP(x) 的有效结论，",
+            "question": "其理论根据是（ ）。",
+            "options": {
+                "A": "A．全称规定规则（US） ",
+                "B": "B．全称推广规则（UG） ",
+                "C": "C．存在规定规则（ES） ",
+                "D": "D．存在推广规则（EG）"
+            },
+            "answer": "答案：A",
+            "steps": [],
+            "concepts": []
+        },
+        {
             "id": "1001",
             "description": "将下列命题符号化：",
             "questions": {
@@ -18,8 +882,9 @@
                 "4": "张辉与王丽都是三好生.",
                 "5": "张辉与王丽是同学."
             },
-            "choices": {},
-            "answers": {},
+            "options": {},
+            "answer": "",
+            "steps": [],
             "chapterId": "1",
             "subchapterId": "1.1",
             "subsubchapterId": "1.1.1",

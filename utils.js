@@ -7,7 +7,7 @@ function verifyToken(req,res,next){
     if (typeof bearerHeader != 'undefined')    {
         const bearer = bearerHeader.split(' ');
         const token = bearer[1];
-        jwt.verify(token, 'mysecretkey', (err, authData)=>{
+        jwt.verify(token, process.env.SECRET_KEY || 'mysecretkey', (err, authData)=>{
             if(err){
                 res.sendStatus(403);
             }else{
