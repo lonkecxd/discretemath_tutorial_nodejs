@@ -16,16 +16,31 @@ var graphenedbURL = process.env['GRAPHENEDB_URL'] || "http://localhost:7474/db/d
 var neo4jdb = new neo4j.GraphDatabase(graphenedbURL);
 // Connect MySQL
 const mysql = require('mysql');
-const mysql_db = mysql.createConnection({
-    host: process.env.MYSQL_HOST || 'us-cdbr-iron-east-01.cleardb.net',
-    user: process.env.MYSQL_USER || 'baffbb7f8d26e3',
-    password: process.env.MYSQL_PASSWORD || 'c983e2d7',
-    database: process.env.MYSQL_DATABASE || 'heroku_bb5e87fda8141d2',
-});
-mysql_db.connect((err)=>{
-    if(err) console.error(err);
-    console.log("***MYSQL Running***");
-})
+var mysql_db;
+function handleDisconnect() {
+    mysql_db = mysql.createConnection({
+        host: process.env.MYSQL_HOST || 'us-cdbr-iron-east-01.cleardb.net',
+        user: process.env.MYSQL_USER || 'baffbb7f8d26e3',
+        password: process.env.MYSQL_PASSWORD || 'c983e2d7',
+        database: process.env.MYSQL_DATABASE || 'heroku_bb5e87fda8141d2',
+    });
+    mysql_db.connect(function(err) {
+        if(err) {
+            console.log('error when connecting to db:', err);
+            setTimeout(handleDisconnect, 2000);
+        }
+    });
+
+    mysql_db.on('error', function(err) {
+        console.log('db error', err);
+        if(err.code === 'PROTOCOL_CONNECTION_LOST') {
+            handleDisconnect();
+        } else {
+            throw err;
+        }
+    });
+}
+handleDisconnect();
 // Before Routes
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
