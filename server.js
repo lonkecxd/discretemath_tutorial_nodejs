@@ -1,7 +1,8 @@
 //include packages
 utils = require('./utils');
 const bodyParser = require('body-parser');
-    //const multer = require('multer');
+const multer = require('multer');
+const upload = multer({ dest: 'avatar/' });
 // json-server router
 const jsonServer = require('json-server');
 const server = jsonServer.create();
@@ -29,8 +30,8 @@ function handleDisconnect() {
             console.log('error when connecting to db:', err);
             setTimeout(handleDisconnect, 2000);
         }
+        console.log("***MySQL Running***");
     });
-
     mysql_db.on('error', function(err) {
         console.log('db error', err);
         if(err.code === 'PROTOCOL_CONNECTION_LOST') {
@@ -41,11 +42,17 @@ function handleDisconnect() {
     });
 }
 handleDisconnect();
+// Cloudinary
+const cloudinary = require('cloudinary');
+cloudinary.config({
+    cloud_name: 'hntupmhmi',
+    api_key: '851164953851241',
+    api_secret: 'Dn6cTZDxBEHofFxUMm948bNewBI'
+});  // Remove when remote
 // Before Routes
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(middlewares);
-
 
 server.get('/api', (req,res)=>{
     res.json({
@@ -54,6 +61,29 @@ server.get('/api', (req,res)=>{
     });
 });
 
+server.get('/api/avatar/:userid', (req,res)=>{
+    var userid = req.params.userid;
+    var url = cloudinary.url(userid,{transformation: [
+            {width: 400,height: 400,radius: "max", crop: "crop"},
+            {width: 200, crop: "scale"},
+            {default_image: "avatar0.png"}
+        ]});
+    res.json({
+        status: 'success',
+        avatar:url
+    });
+});
+server.post('/api/avatar', upload.single('avatar'), (req,res)=>{
+    var file = req.file;
+    var userid = req.body['userid'];
+    cloudinary.uploader.upload(file.path,
+        function(result) {
+            res.json({
+                status: 'success',
+                result: result
+            })
+        }, {public_id: userid});
+});
 server.post('/api/register',(req,res)=>{
     let body = req.body;
     let sql = `INSERT INTO  user (username,password,email) VALUES ('${body.username}','${body.password}','${body.email||'empty'}');`;
