@@ -49,6 +49,8 @@ cloudinary.config({
     api_key: '851164953851241',
     api_secret: 'Dn6cTZDxBEHofFxUMm948bNewBI'
 });  // Remove when remote
+// nlp-compromise
+const nlp = require('compromise');
 // Before Routes
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
@@ -58,6 +60,14 @@ server.get('/api', (req,res)=>{
     res.json({
         status: 'success',
         message:"Welcome to API!"
+    });
+});
+
+server.get('/api/nlp', (req,res)=>{
+    let doc = nlp("吴颖既用功又聪明.");
+    res.json({
+        status: 'success',
+        message: doc
     });
 });
 
@@ -124,6 +134,7 @@ server.post('/api/login',(req,res)=>{
     })
 });
 
+server.use(router);
 server.use(utils.exclude('/api/:other', utils.verifyToken));
 // Use JWT below
 
@@ -160,6 +171,6 @@ server.get('/graph/:p1', (req,res)=>{
 
 
 server.use(jsonServer.bodyParser);
-server.use(router);
+
 
 server.listen(port,()=>{console.log("***JsonServer Running***")});
