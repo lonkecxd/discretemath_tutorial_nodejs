@@ -110,6 +110,7 @@ server.post('/api/register',(req,res)=>{
 
 server.post('/api/login',(req,res)=>{
     let body = req.body;
+    console.log(`登入 ${body.email} ${body.password}`);
     let sql = `SELECT * FROM  user WHERE email='${body.email}' AND password='${body.password}';`;
     mysql_db.query(sql, (err, result)=>{
         if (err) console.error(err);
