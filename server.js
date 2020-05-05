@@ -65,7 +65,7 @@ server.get('/api', (req,res)=>{
 
 server.get('/api/nlp/:q', (req,res)=>{
     var q = req.params.q;
-    console.log("Q: "+q);
+    console.log("NLP Query: "+q);
     res.json({
         status: 'success',
         message: JSON.stringify({
