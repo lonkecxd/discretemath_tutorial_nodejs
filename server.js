@@ -67,8 +67,8 @@ server.get('/api/nlp/:q', (req,res)=>{
     var q = req.params.q;
     console.log("NLP Query: "+q);
     var message = JSON.stringify({
-        "explain": "所谓幂集（Power Set）， 就是原集合中所有的子集（包括全集和空集）构成的集族。",
-        "related": ["可数集","不可数集"]
+        'explain': '所谓幂集（Power Set）， 就是原集合中所有的子集（包括全集和空集）构成的集族。',
+        'related': ['可数集','不可数集']
     });
     console.log(message);
     res.json({
