@@ -135,7 +135,7 @@ server.post('/api/login',(req,res)=>{
     })
 });
 
-server.use(router);
+
 server.use(utils.exclude('/api/:other', utils.verifyToken));
 // Use JWT below
 
@@ -146,13 +146,13 @@ server.get('/userinfo', (req,res)=>{
         userinfo: userInfo.user
     });
 });
-
-server.get('/graph/:p1', (req,res)=>{
-    var p1 = req.params.p1;
+// 创建Problem
+server.get('/graph/create/problem/:pid', (req,res)=>{
+    var pid = req.params.pid;
     neo4jdb.cypher({
-        query: 'MATCH (n:Person {name: {personName}}) RETURN n',
+        query: 'MERGE (:Problem {pid:\'{pId}\' }) ',
         params: {
-            personName: p1
+            pId: pid
         }
     }, function(err, results){
         if (err) {
@@ -169,9 +169,93 @@ server.get('/graph/:p1', (req,res)=>{
         }
     });
 });
-
+// 创建Person
+server.get('/graph/create/user/:uid', (req,res)=>{
+    var uid = req.params.uid;
+    neo4jdb.cypher({
+        query: 'MERGE (:Person {uid:\'{uId}\' }) ',
+        params: {
+            uId: uid
+        }
+    }, function(err, results){
+        if (err) {
+            console.error('Error of Neo4j:', err);
+            res.json({
+                status: 'fail',
+                err: err
+            });
+        } else {
+            res.json({
+                status: 'success',
+                data: results
+            });
+        }
+    });
+});
+// 创建Person与Problem关系
+server.get('/graph/create/relation/:uid/:action/:pid', (req,res)=>{
+    var uid = req.params.uid;
+    var action = req.params.action;
+    var pid = req.params.pid;
+    neo4jdb.cypher({
+        query: 'MATCH (a:Person{uid:\'{uId}\' }),' +
+            '(b:Problem{pid:\'{pId}\' })' +
+            'MERGE (a)-[:{action} ]->(b)',
+        params: {
+            uId: uid,
+            pId: pid,
+            action: action
+        }
+    }, function(err, results){
+        if (err) {
+            console.error('Error of Neo4j:', err);
+            res.json({
+                status: 'fail',
+                err: err
+            });
+        } else {
+            res.json({
+                status: 'success',
+                data: results
+            });
+        }
+    });
+});
+// 寻找题目
+server.get('/graph/find/:uid/:action', (req,res)=>{
+    var uid = req.params.uid;
+    var action = req.params.action;
+    var query = action == null || action === '' ?
+        'MATCH (PER:Person{uid:\'{uId}\' })-[R]-(P:Problem) RETURN R,P':
+        'MATCH (PER:Person{uid:\'{uId}\' })-[:{action}]-(P:Problem) RETURN P'
+    var params = action == null || action === '' ?
+        {
+            uId: uid,
+        }:
+        {
+            uId: uid,
+            action: action
+        }
+    neo4jdb.cypher({
+        query: query,
+        params: params
+    }, function(err, results){
+        if (err) {
+            console.error('Error of Neo4j:', err);
+            res.json({
+                status: 'fail',
+                err: err
+            });
+        } else {
+            res.json({
+                status: 'success',
+                data: results
+            });
+        }
+    });
+});
 
 server.use(jsonServer.bodyParser);
-
+server.use(router);
 
 server.listen(port,()=>{console.log("***JsonServer Running***")});
