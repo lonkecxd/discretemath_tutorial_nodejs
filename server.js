@@ -68,10 +68,10 @@ server.get('/api/nlp/:q', (req,res)=>{
     console.log("Q: "+q);
     res.json({
         status: 'success',
-        message: {
+        message: JSON.stringify({
             explain: '所谓幂集（Power Set）， 就是原集合中所有的子集（包括全集和空集）构成的集族。',
             related: ['可数集','不可数集']
-        }
+        })
     });
 });
 
