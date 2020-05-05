@@ -126,7 +126,7 @@ server.post('/api/login',(req,res)=>{
                     res.json({
                         status: 'success',
                         token: token,
-                        uid: result[0].id,
+                        uid: String(result[0].id),
                     });
                 }
             });
