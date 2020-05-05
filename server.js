@@ -136,7 +136,7 @@ server.post('/api/login',(req,res)=>{
 });
 
 
-server.use(utils.exclude('/api/:other', utils.verifyToken));
+// server.use(utils.exclude('/api/:other', utils.verifyToken));
 // Use JWT below
 
 server.get('/userinfo', (req,res)=>{
@@ -225,20 +225,11 @@ server.get('/graph/create/relation/:uid/:action/:pid', (req,res)=>{
 server.get('/graph/find/:uid/:action', (req,res)=>{
     var uid = req.params.uid;
     var action = req.params.action;
-    var query = action == null || action === '' ?
-        'MATCH (PER:Person{uid:\'{uId}\' })-[R]-(P:Problem) RETURN R,P':
-        'MATCH (PER:Person{uid:\'{uId}\' })-[:{action}]-(P:Problem) RETURN P'
-    var params = action == null || action === '' ?
-        {
-            uId: uid,
-        }:
-        {
-            uId: uid,
-            action: action
-        }
+    var query = action === "all" ?
+        "MATCH (PER:Person{uid:'"+uid+"'})-[R]-(P:Problem) RETURN R,P":
+        "MATCH (PER:Person{uid:'"+uid+"'})-[:"+action+"]-(P:Problem) RETURN P"
     neo4jdb.cypher({
         query: query,
-        params: params
     }, function(err, results){
         if (err) {
             console.error('Error of Neo4j:', err);
@@ -253,6 +244,11 @@ server.get('/graph/find/:uid/:action', (req,res)=>{
             });
         }
     });
+});
+
+process.on('uncaughtException', function(e) {
+    console.log('--- CAUGHT BY EVENT ---');
+    console.log(e);
 });
 
 server.use(jsonServer.bodyParser);
