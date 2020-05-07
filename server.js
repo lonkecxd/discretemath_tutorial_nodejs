@@ -65,10 +65,23 @@ server.get('/api', (req,res)=>{
 
 server.get('/api/nlp/:q', (req,res)=>{
     var q = req.params.q;
-    console.log("NLP Query: "+q);
+    console.log("Query: "+q);
+    var fs = require("fs");
+    var contents = fs.readFileSync("knowledge.json");
+    var data = JSON.parse(contents);
+    var explain;
+    var related;
+    for (var i in data.entities){
+        if (data.entities[i].name===q){
+            explain = data.entities[i].definition;
+            if (data.entities[i]['related']!=null){
+                related = data.entities[i]['related'];
+            }
+        }
+    }
     var message = JSON.stringify({
-        "explain": "所谓幂集（Power Set）， 就是原集合中所有的子集（包括全集和空集）构成的集族。",
-        "related": ["可数集","不可数集"]
+        "explain": explain,
+        "related": related
     });
     console.log(message);
     res.json({
